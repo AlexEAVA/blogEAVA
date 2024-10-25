@@ -1,3 +1,11 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
-<p>wenas wenas</p>
+# app/views/article/index.html.erb
+<h1>Artículos</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %> -
+      <%= article.body %> 
+    </li>
+  <% end %>
+</ul>
