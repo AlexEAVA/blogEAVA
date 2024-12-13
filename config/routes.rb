@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   #get "/articles/:id", to: "articles#show"
 
-  resources :articles
+  resources :articles do
+  resources :comments
   
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
@@ -18,4 +19,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
 end
